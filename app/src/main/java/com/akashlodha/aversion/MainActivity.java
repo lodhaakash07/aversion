@@ -21,18 +21,18 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         if (Build.VERSION.SDK_INT >= 26) {
-            vibrator.vibrate(VibrationEffect.createOneShot(1500, VibrationEffect.DEFAULT_AMPLITUDE));
+            vibrator.vibrate(VibrationEffect.createOneShot(2000, VibrationEffect.DEFAULT_AMPLITUDE));
         } else {
-            vibrator.vibrate(1500);
+            vibrator.vibrate(2000);
         }
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 if (Build.VERSION.SDK_INT >= 26) {
-                    vibrator.vibrate(VibrationEffect.createOneShot(1500, VibrationEffect.DEFAULT_AMPLITUDE));
+                    vibrator.vibrate(VibrationEffect.createOneShot(2000, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
-                    vibrator.vibrate(1500);
+                    vibrator.vibrate(2000);
                 }
             }
         });
